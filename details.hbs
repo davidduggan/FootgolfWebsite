@@ -1,0 +1,30 @@
+      <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                Change Your Details Below 
+            </div>
+            <div class="card-body">
+                <form action="/auth/details" method="POST">
+                 <input name="userId" type="number" id="userId" hidden value="{{user.id}}">
+                <div class="form-group">
+                    <label for="changeName">Full Name</label>
+                    <input type="text" class="form-control" value="{{user.name}}" id="changeName" name="changeName">
+                </div>
+                <div class="form-group">
+                    <label for="changeEmail">Email Address</label>
+                    <input type="email" class="form-control" value="{{user.email}}" id="changeEmail" name="changeEmail">
+                <div class="form-group">
+                    <label for="changeClub">Home Club</label>
+                    <input type="text" class="form-control" value="{{user.club}}" id="changeClub" name="changeClub">
+                </div><br>
+                <button type="submit" class="btn btn-danger">Change Details</button>
+                <br><br>
+                <a href="/profile" class="btn btn-primary" role="button">Return to Profile</a>
+                </div><br>
+                </form>
+            </div>
+        </div>
+        {{#if message }}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+    </div>

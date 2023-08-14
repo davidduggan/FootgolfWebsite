@@ -1,0 +1,18 @@
+<nav>
+    <h4 class="text-center">Footgolf Ireland</h4>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {{#if user}}
+        <li><a href="/courses">Courses</a></li>
+        {{!-- <li><a href="/handicap">Handicap</a></li> --}}
+        {{!-- handicap is confusing, the below is much more straight forward to the user --}}
+        {{!-- route is also better as score because they are uploading score (look into REST) --}}
+        <li><a href="/score">Upload Score</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        {{/if}}
+    </ul>
+</nav>

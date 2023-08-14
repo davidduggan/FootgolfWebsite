@@ -1,0 +1,50 @@
+<div class="container mt-4 center">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="avatar-ctn">
+                        <img src="/profile.png" class="avatar" alt="user profile picture"/>
+                    </div>
+                    <div class="card-body"> 
+                        <h3 class="cards-title text-center">Welcome Back {{user.name}}!</h3><br>
+
+                        <h5 class="cards-title">Email: {{user.email}}</a>
+                        <h5 class="cards-title">Club: {{user.club}}</a>
+                        <h5 class="cards-title">Current Playing Handicap: <b>{{user.handicap}}</b></h5>
+                        <br>
+                        <a href="/details" class="btn btn-primary">Change Details</a><a href="/password" class="btn btn-primary float-end">Change Password</a><br>
+                        <br>
+                        <br>
+                        <h5 class="cards-title">Update Profile Picture:</h5>
+                        <b><label class="form-label" for="customFile"></label></b>
+                        <input type="file" class="form-control" id="customFile" />
+                        <button type="submit" class="btn btn-primary mb-3">Upload Image</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-8">
+                            <div class="card text-center">
+                <div class="card-header">
+                    Scores
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Hey {{user.name}} </h5>
+                    <p class="card-text">Take a look at some of your recent scores</p>
+                    <a href="/score" class="btn btn-primary">Enter New Score</a>
+                </div>
+
+                <div class="card-footer text-muted">
+
+                </div>
+
+            </div>
+      
+           
+        </div>
+
+    </div>
+
+
+</div>

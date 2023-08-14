@@ -1,0 +1,136 @@
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/banner9.jpg" class="d-block w-100 fixed-height" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/banner7.jpg" class="d-block w-100 fixed-height" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/bannerCourse.jpg" class="d-block w-100 fixed-height" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<br>
+    
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4 text-center fw-bold">Footgolf Rankings Ireland</h1>
+            <p class="lead text-center">Welome to Irelands first Footgolf ranking site! This site provides players with their own
+                unique rank based off our own handicap system. See where you stand against the best players around ireland and see your handicap
+                progress to move you to the the top of the Irish Footgolf rankings!
+                </p><br><br>
+
+                <h3 class="text-center">Current Standings</h3>
+            <hr class="my-4">
+
+            <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        </th>
+                        <th class="th-sm">Rank
+
+                        <th class="th-sm">Name
+            
+                        </th>
+                        <th class="th-sm">Club
+
+                        </th>
+                        <th class="th-sm">Handicap
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each userList as |user|}}
+                    <tr>
+                        <td></td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.club}}</td>
+                        <td>{{user.handicap}}</td>
+                        
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+
+
+
+            <hr class="my-4">
+            <br>
+            <h1 class="display-4 text-center fw-bold">News</h1>
+            <hr class="my-4">
+        </div>
+    </div>
+
+<div class="card " style="width: 60rem;">
+  <div class="card-body">
+    <h3 class="card-title">Footgolf Euros</h3>
+<p class="card-text">We were delighted to see three FootGolf Kildare representatives on the Irish Team at the Euro’s, held in
+                Magnolia Park at the end of September. Damien Coyne, Patryk Kwiecien and Mark Duggan flew
+                to the UK to represent Ireland in one of foremost events in European FootGolf. Facing Switzerland in the
+                first round proved no real challenge for this Irish Team, beating them 7-2 in the first of their 3 group
+                games, becoming the first Irish FootGolf team
+                to win a team game at a major event! A fantastic achievement for the team and a proud day for FootGolf
+                Kildare to have three of our lads out there making history. Congratulations to all involved!
+</p>
+    <a href="http://europeanfootgolftour.com/" class="btn btn-info" role="button">Learn More</a>
+    
+  </div>
+  <img src="images/euros.jpg" class="card-img-top img-irishTeam"" "alt="...">
+  </div>
+
+  <br>
+
+  <div class="card " style="width: 60rem;">
+  <div class="card-body">
+    <h3 class="card-title">Footgolf World Cup 2023</h3>
+<p class="card-text">Congratulations to the irish team that qualified for the World Footgolf Cup in Orlando Florida. FIFG FootGolf World Cup Orlando 2023, is the 4th World Cup of FootGolf under the Federation for International FootGolf. 
+    This prestigious tournament takes place in Orlando, Florida using courses at Walt Disney World Golf and Evermore Orlando Resort.
+</p>
+    <a href="https://www.orlando2023.com/" class="btn btn-info" role="button">Learn More</a>
+    
+  </div>
+  <img src="images/worldcup2.jpeg" class="card-img-top img-irishTeam"" "alt="...">
+  </div>
+<hr class="my-4">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+    
+   
+
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+            $(document).ready(function () {
+                $('#dtBasicExample').DataTable();
+                $('.dataTables_length').addClass('bs-select');
+            });
+        </script>
+
+        <footer class="footer text-center">
+    <h5> Follow us on social media @footgolfrankings</h5>
+     <button class="btn bg-danger bg-gradient" type="button">
+      <span><i class="fa-brands fa-youtube text-white"></i></span> <span class="text-white">Youtube</span>
+    </button>
+    <button class="btn bg-info bg-gradient" type="button">
+      <span><i class="fa-brands fa-twitter text-white"></i></span><span class="text-info text-white">Twitter</span>
+    </button>
+    <button class="btn bg-primary bg-gradient" type="button">
+      <span> <i class="fa-brands fa-facebook text-white"></i></span> <span class="text-white">Facebook</span>
+    </button>
+    <button class="btn bg-danger bg-gradient" type="button">
+      <span> <i class="fa-brands fa-instagram text-white"></i> </span> <span class="text-white">instagram</span>
+    </button>
+
+</footer>

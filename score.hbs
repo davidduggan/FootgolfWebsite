@@ -1,0 +1,40 @@
+{{!-- renamed this file to score as this way it is less confusing --}}
+
+<div class="card text-center">
+    <div class="card-header">
+        {{!--<span>{{user.name}} here you can enter new scores to update your playing handicap!</span><br>--}}
+        {{#if user.handicap}}
+        <span><h5><b>Current handicap: {{user.handicap}}</b></h5></span>
+        {{else}}
+        {{!-- pass amount of scores the user has submitted into this page in a variable and substitute for 'x' --}}
+        <span><h5><b></b>You need to upload more scores to be given a handicap.</b></h5></span>
+        {{/if}}
+    </div>
+    <div class="card-body">
+        <h2 class="card-text">Please enter your new score below to receive an updated handicap</h2>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="text-center"></h2>
+    <form action="/score" method="POST">
+        <input name="userId" type="number" hidden value="{{user.id}}">
+        <h5>Please Enter The Course Name</h5>
+        <div class="form-group">
+            <label for="course">Course</label>
+            <input name="course" type="text" class="form-control" id="course" placeholder="Enter Course Name">
+            <label for="coursePar">Course Par</label>
+            <input name="coursePar" type="text" class="form-control" id="coursePar" placeholder="Enter par">
+            <div class="form-group">
+                <label for="score">Gross Score</label>
+                <input name="score" type="number" class="form-control" id="score" placeholder="Enter score">
+            </div><br>
+
+            <h5>Please upload your signed scorecard</h5>
+            <div class="form-group">
+                <label for="scoreCard">Scorecard Upload:</label>
+                <input name="scoreCard" type="file" class="form" id="card">
+            </div><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
